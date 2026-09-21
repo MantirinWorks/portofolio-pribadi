@@ -43,3 +43,16 @@ console.log(`Saat ini saya adalah seorang ${targetKarir}`);
 
 const targetKarirSekarang = "Senior Web Developer";
 console.log(`Lima tahun lagi, target saya adalah menjadi ${targetKarirSekarang}`);
+
+// ===================================================================================================
+// Solusi Alternatif:
+// let targetKarir = "Junior Developer"; // Ubah menjadi let
+// console.log(`Saat ini saya adalah seorang ${targetKarir}`);
+
+// targetKarir = "Senior Web Developer"; // Sekarang variabel yang sama bisa ditimpa nilainya
+// console.log(`Lima tahun lagi, target saya adalah menjadi ${targetKarir}`);
+
+// Kedua cara (cara Anda dan cara alternatif) sama-sama benar, 
+// tergantung apakah Anda memang membutuhkan variabel yang terpisah atau 
+// ingin memperbarui kotak variabel yang sama.
+// ===================================================================================================
