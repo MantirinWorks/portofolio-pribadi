@@ -22,17 +22,24 @@ console.log(`Target saya beberapa tahun kedepan adalah menjadi ${peran} dengan p
 // Tantangan 1: Kalkulator Umur Dinamis
 const tahunLahir = 1998;
 const tahunSekarang = 2026;
-let umur = tahunSekarang - tahunLahir;
+let umur = tahunSekarang-tahunLahir;
 
 console.log(`Saya lahir pada tahun ${tahunLahir}, sehingga umur saya sekarang adalah ${umur} tahun.`);
 
 // Tantangan 2: Estimasi Sisa Target
 const totalHari = 30;
 const hariBerjalan = 8;
-let sisaHari = totalHari - hariBerjalan;
+let sisaHari = totalHari-hariBerjalan;
 
 let estimasiProyek = Math.floor(sisaHari / 7);
 
 console.log(`Sudah ${hariBerjalan} hari berjalan dari program ${totalHari} hari menjadi Frontend Developer`);
 console.log(`Berarti, sekarang tinggal tersisa ${sisaHari} hari lagi untuk target bisa tercapai`);
 console.log(`Saya juga harus membuat proyek disetiap minggu nya, yang berarti masih ada ${estimasiProyek} proyek lagi yang harus dibuat`);
+
+// Tantangan 3: Memperbaiki Bug (Error)
+const targetKarir = "Junior Developer";
+console.log(`Saat ini saya adalah seorang ${targetKarir}`);
+
+const targetKarirSekarang = "Senior Web Developer";
+console.log(`Lima tahun lagi, target saya adalah menjadi ${targetKarirSekarang}`);
