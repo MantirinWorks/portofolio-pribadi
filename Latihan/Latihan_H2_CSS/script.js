@@ -56,3 +56,44 @@ console.log(`Lima tahun lagi, target saya adalah menjadi ${targetKarirSekarang}`
 // tergantung apakah Anda memang membutuhkan variabel yang terpisah atau 
 // ingin memperbarui kotak variabel yang sama.
 // ===================================================================================================
+
+// --- MATERI HARI 9: IF / ELSE ---
+
+const jamSaatIni = 14; // Anggap sekarang jam 14:00 ( jam 2 siang )
+let ucapan = "";
+
+if (jamSaatIni >= 5 && jamSaatIni < 12) {
+    // Kondisi 1: jika jam lebih/sama dengan 5 DAN kurang dari 12
+    ucapan = "Selamat Pagi!";
+} else if (jamSaatIni >= 12 && jamSaatIni < 15) {
+    // Kondisi 2: Jika jam 12 hingga sebelum 15
+    ucapan = "Selamat Siang!";
+} else if (jamSaatIni >= 15 && jamSaatIni < 18) {
+    // Kondisi 3: Jika jam 15 hingga sebelum 18
+    ucapan = "Selamat Sore!";
+} else {
+    // Kondisi Terakhir: Jika semua kondisi di atas tidak terpenuhi
+    ucapan = "Selamat Malam!";
+}
+
+console.log(`${ucapan} Selamat datang kembali di portofolio Raihanaufal.`);
+
+
+// --- MATERI HARI 9: FOR LOOP ---
+
+const totalProyek = 4; // Target proyek kita di kurikulum ini
+
+console.log("Mulai mengecek status proyek...");
+
+// Sintaks for (Mulai dari 1; Berhenti jika lebih dari totalProyek; Tambah 1 setiap putaran)
+for (let i = 1; i <= totalProyek; i++) {
+     
+    // Kita bisa memasukan IF di dalam FOR
+    if (i === 1) {
+        console.log(`proyek ke-${i}: Website Portofolio (SELESAI) ✅`);
+    } else {
+        console.log(`proyek ke-${i}: Sedang dalam tahap perencanaan ⏳`);
+    }
+}
+
+console.log("Pengecekan status selesai.");
