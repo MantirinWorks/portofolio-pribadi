@@ -22,14 +22,14 @@ console.log(`Target saya beberapa tahun kedepan adalah menjadi ${peran} dengan p
 // Tantangan 1: Kalkulator Umur Dinamis
 const tahunLahir = 1998;
 const tahunSekarang = 2026;
-let umur = tahunSekarang-tahunLahir;
+let umur = tahunSekarang - tahunLahir;
 
 console.log(`Saya lahir pada tahun ${tahunLahir}, sehingga umur saya sekarang adalah ${umur} tahun.`);
 
 // Tantangan 2: Estimasi Sisa Target
 const totalHari = 30;
 const hariBerjalan = 8;
-let sisaHari = totalHari-hariBerjalan;
+let sisaHari = totalHari - hariBerjalan;
 
 let estimasiProyek = Math.floor(sisaHari / 7);
 
@@ -87,7 +87,7 @@ console.log("Mulai mengecek status proyek...");
 
 // Sintaks for (Mulai dari 1; Berhenti jika lebih dari totalProyek; Tambah 1 setiap putaran)
 for (let i = 1; i <= totalProyek; i++) {
-     
+
     // Kita bisa memasukan IF di dalam FOR
     if (i === 1) {
         console.log(`proyek ke-${i}: Website Portofolio (SELESAI) ✅`);
