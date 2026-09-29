@@ -97,3 +97,22 @@ for (let i = 1; i <= totalProyek; i++) {
 }
 
 console.log("Pengecekan status selesai.");
+
+
+// --- TANTANGAN MATERI HARI 9 ---
+
+// Tantangan 1: Evaluator Jam Belajar (If / Else)
+let jamBelajar = 1;
+let kutipan = "";
+
+if (jamBelajar >= 4) {
+    kutipan = "Luar biasa! Tapi jangan lupa istirahat agar mata tidak lelah.";
+} else if (jamBelajar >= 2 && jamBelajar < 4) {
+    kutipan = "Pertahankan fokusmu, progress yang sangat bagus!";
+} else {
+    kutipan = "Ayo pemanasan dan mulai buka Visual Studio Code sekarang!";
+}
+
+console.log(`${kutipan}`);
+
+// Tantangan 2: Pengecek Status Modul (For Loop + If/Else)
