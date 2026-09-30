@@ -116,3 +116,12 @@ if (jamBelajar >= 4) {
 console.log(`${kutipan}`);
 
 // Tantangan 2: Pengecek Status Modul (For Loop + If/Else)
+const angka = 10;
+
+for (let i = 1; i <= angka; i++) {
+    if (i % 2 === 0) {
+        console.log(`Modul ke-${i} adalah Genap: Materi Praktek 💻`);
+    } else {
+        console.log(`Modul ke-${i} adalah Ganjil: Materi Teori 📚`);
+    }
+}
