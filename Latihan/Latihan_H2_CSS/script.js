@@ -130,10 +130,10 @@ for (let i = 1; i <= angka; i++) {
 // --- MATERI HARI 10: DOM MANIPULATION ---
 
 // Menangkap element h1 di dalam class info-profil
-judulProfil = document.querySelector(`.info-profil h1`);
+const judulProfil = document.querySelector(`.info-profil h1`);
 
 // Menangkap paragraf pertama di dalam seksi `tentang`
-teksTentang = document.querySelector(`#tentang p`);
+const teksTentang = document.querySelector(`#tentang p`);
 
 // textContent mengganti semua teks murni di dalam element tersebut
 judulProfil.textContent = "Raihanaufal Fayadh 🚀";
@@ -145,3 +145,15 @@ teksTentang.innerHTML = "Halo! Saya seorang <strong>Frontend Developer</strong> 
 judulProfil.style.color = "#f39c12"; // Warna Orange
 judulProfil.style.textShadow = "2px 2px 5px rgba(0, 0, 0, 0.2)";
 // Catatan: Properti CSS yang memiliki tanda hubung seperti background-color harus ditulis menyambung dengan huruf besar di JS menjadi backgroundColor
+
+
+// --- TANTANGAN MATERI HARI 10 ---
+
+// Tantangan 1: Modifikasi Tombol Form (Text & Style)
+const tombolKirim = document.querySelector(`.tombol-pesan button`);
+tombolKirim.textContent = "Kirim Sekarang 🚀";
+tombolKirim.style.backgroundColor = "#3498db";
+
+// Tantangan 2: Menyisipkan Tag HTML ke Judul (innerHTML)
+const judulProyek = document.querySelector(`#proyek h2`);
+judulProyek.innerHTML = "Koleksi <span style=`color: #e74c3c; font-weight: bold;`>Proyek</span> Saya 📁";
