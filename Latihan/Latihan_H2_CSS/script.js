@@ -125,3 +125,23 @@ for (let i = 1; i <= angka; i++) {
         console.log(`Modul ke-${i} adalah Ganjil: Materi Teori 📚`);
     }
 }
+
+
+// --- MATERI HARI 10: DOM MANIPULATION ---
+
+// Menangkap element h1 di dalam class info-profil
+judulProfil = document.querySelector(`.info-profil h1`);
+
+// Menangkap paragraf pertama di dalam seksi `tentang`
+teksTentang = document.querySelector(`#tentang p`);
+
+// textContent mengganti semua teks murni di dalam element tersebut
+judulProfil.textContent = "Raihanaufal Fayadh 🚀";
+
+// innerHTML menerjemahkan string menjadi element HTML sungguhan
+teksTentang.innerHTML = "Halo! Saya seorang <strong>Frontend Developer</strong> yang siap membangun web interaktif. Saat ini saya sedang mendalami javaScript murni.";
+
+// Mengubah warna dan menambahkan efek transisi dari JS
+judulProfil.style.color = "#f39c12"; // Warna Orange
+judulProfil.style.textShadow = "2px 2px 5px rgba(0, 0, 0, 0.2)";
+// Catatan: Properti CSS yang memiliki tanda hubung seperti background-color harus ditulis menyambung dengan huruf besar di JS menjadi backgroundColor

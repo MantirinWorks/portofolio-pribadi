@@ -146,6 +146,21 @@ article {
     animation-delay: 0.5s;
 }
 
+#tentang {
+    width: 350px;
+    /* Lebar sidebar tetap */
+    background-color: #ecf0f1;
+    /* Warna abu-abu terang */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+
+    animation-name: geserDariKanan;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+    animation-delay: 0.8s;
+}
+
 /* Styling pembungkus Proyek */
 .kumpulan-proyek {
     display: flex;
