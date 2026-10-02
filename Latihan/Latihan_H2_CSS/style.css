@@ -30,6 +30,8 @@
     }
 }
 
+
+
 /* 2. Pengaturan Dasar Halaman (Tipografi & Warna Background) */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -324,6 +326,11 @@ footer {
         /* mengisi penuh lebar layar */
         margin: 20px 0;
         /* Menghilangkan margin kiri-kanan agar tidak keluar layar */
+
+        animation-name: munculKeAtas;
+        animation-duration: 1s;
+        animation-fill-mode: backwards;
+        animation-delay: 0.5s;
     }
 
     #tentang {
@@ -331,6 +338,11 @@ footer {
         /* mengisi penuh lebar layar */
         margin: 20px 0;
         /* Menghilangkan margin kiri-kanan agar tidak keluar layar */
+
+        animation-name: munculKeAtas;
+        animation-duration: 1s;
+        animation-fill-mode: backwards;
+        animation-delay: 0.8s;
     }
 
     /* 5. Footer menumpuk ke bawah */

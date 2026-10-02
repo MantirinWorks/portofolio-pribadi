@@ -170,3 +170,34 @@ for (let i = 0; i < semuaTautan.length; i++) {
     semuaTautan[i].textContent = semuaTautan[i].textContent + " 📌";
 }
 
+
+// --- MATERI HARI 11: EVENT LISTENERS ---
+
+// Langkah 1: Mencegah Perilaku Bawaan (Prevent Default)
+// Kita gunakan variabel tombolKirim yang sudah Anda buat di Tantangan sebelumnya.
+// (Pastikan tombolKirim sudah dideklarasikan sebelumnya dwngan document.querySelector).
+tombolKirim.addEventListener('click', function(event) {
+    // 1. Mencegah halaman refresh otomatis
+    event.preventDefault();
+
+    // 2. Tampilkan pesan sukses di console 
+    console.log("Tombol berhasil diklik! Pesan sedang diproses...");
+
+    // 3. Ubah teks tombol sebagai umpan balik visual
+    tombolKirim.textContent = "Pesan Terkirim! ✅";
+    tombolKirim.style.backgroundColor = "#27ae68"; // Ubah jadi hijau
+});
+
+// Langkah 2: Interaksi Mouse (Mouseover & Mouseout)
+// Kita gunakan variabel judulProfil yang sudah Anda buat di materi Hari 10.
+// Saat kursor mouse MASUK ke area teks judul
+judulProfil.addEventListener('mouseover', function() {
+    judulProfil.style.transform = "scale(1.1)"; // Membesarkan teks 10%
+    judulProfil.style.transition = "transform 0.3s ease"; // Animasi transisi halus
+    judulProfil.style.cursor = "pointer"; // Ubah kursor menjadi pointer (Bentuk Tangan)
+});
+
+// Saat kursor mouse KELUAR dari area teks judul
+judulProfil.addEventListener('mouseout', function() {
+    judulProfil.style.transform = "scale(1)"; // Kembalikan ukuran teks ke normal
+});
