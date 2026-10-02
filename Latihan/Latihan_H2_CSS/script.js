@@ -156,4 +156,17 @@ tombolKirim.style.backgroundColor = "#3498db";
 
 // Tantangan 2: Menyisipkan Tag HTML ke Judul (innerHTML)
 const judulProyek = document.querySelector(`#proyek h2`);
-judulProyek.innerHTML = "Koleksi <span style=`color: #e74c3c; font-weight: bold;`>Proyek</span> Saya 📁";
+judulProyek.innerHTML = "Koleksi <span style='color: #e74c3c; font-weight: bold;'>Proyek</span> Saya 📁";
+
+// Tantangan 3: Memanipulasi Atribut Input
+// Selain mengubah teks (textContent) dan desain (style), JavaScript juga bisa mengubah atribut asli HTML seperti href, src, atau placeholder.
+const inputNama = document.querySelector(`#nama`);
+inputNama.placeholder = "Masukan nama lengkap Anda di sini..."; // Mengubah placeholder input nama
+
+// Tantangan 4: Menangkap Banyak Elemen Sekaligus (querySelectorAll + Loop)
+const semuaTautan = document.querySelectorAll(`nav ul li a`); // Menangkap semua elemen <a> di dalam <nav>
+
+for (let i = 0; i < semuaTautan.length; i++) {
+    semuaTautan[i].textContent = semuaTautan[i].textContent + " 📌";
+}
+

@@ -326,6 +326,13 @@ footer {
         /* Menghilangkan margin kiri-kanan agar tidak keluar layar */
     }
 
+    #tentang {
+        width: 100%;
+        /* mengisi penuh lebar layar */
+        margin: 20px 0;
+        /* Menghilangkan margin kiri-kanan agar tidak keluar layar */
+    }
+
     /* 5. Footer menumpuk ke bawah */
     footer {
         flex-direction: column;
