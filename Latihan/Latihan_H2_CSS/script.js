@@ -19,14 +19,14 @@ jumlahProyek = 15;
 
 console.log(`Target saya beberapa tahun kedepan adalah menjadi ${peran} dengan portofolio sebanyak ${jumlahProyek} proyek.`);
 
-// Tantangan 1: Kalkulator Umur Dinamis
+// Tantangan 4.1: Kalkulator Umur Dinamis
 const tahunLahir = 1998;
 const tahunSekarang = 2026;
 let umur = tahunSekarang - tahunLahir;
 
 console.log(`Saya lahir pada tahun ${tahunLahir}, sehingga umur saya sekarang adalah ${umur} tahun.`);
 
-// Tantangan 2: Estimasi Sisa Target
+// Tantangan 4.2: Estimasi Sisa Target
 const totalHari = 30;
 const hariBerjalan = 8;
 let sisaHari = totalHari - hariBerjalan;
@@ -37,7 +37,7 @@ console.log(`Sudah ${hariBerjalan} hari berjalan dari program ${totalHari} hari 
 console.log(`Berarti, sekarang tinggal tersisa ${sisaHari} hari lagi untuk target bisa tercapai`);
 console.log(`Saya juga harus membuat proyek disetiap minggu nya, yang berarti masih ada ${estimasiProyek} proyek lagi yang harus dibuat`);
 
-// Tantangan 3: Memperbaiki Bug (Error)
+// Tantangan 4.3: Memperbaiki Bug (Error)
 const targetKarir = "Junior Developer";
 console.log(`Saat ini saya adalah seorang ${targetKarir}`);
 
@@ -101,7 +101,7 @@ console.log("Pengecekan status selesai.");
 
 // --- TANTANGAN MATERI HARI 9 ---
 
-// Tantangan 1: Evaluator Jam Belajar (If / Else)
+// Tantangan 9.1: Evaluator Jam Belajar (If / Else)
 let jamBelajar = 3;
 let kutipan = "";
 
@@ -115,7 +115,7 @@ if (jamBelajar > 4) {
 
 console.log(`${kutipan}`);
 
-// Tantangan 2: Pengecek Status Modul (For Loop + If/Else)
+// Tantangan 9.2: Pengecek Status Modul (For Loop + If/Else)
 const angka = 10;
 
 for (let i = 1; i <= angka; i++) {
@@ -149,21 +149,21 @@ judulProfil.style.textShadow = "2px 2px 5px rgba(0, 0, 0, 0.2)";
 
 // --- TANTANGAN MATERI HARI 10 ---
 
-// Tantangan 1: Modifikasi Tombol Form (Text & Style)
+// Tantangan 10.1: Modifikasi Tombol Form (Text & Style)
 const tombolKirim = document.querySelector(`.tombol-pesan button`);
 tombolKirim.textContent = "Kirim Sekarang 🚀";
 tombolKirim.style.backgroundColor = "#3498db";
 
-// Tantangan 2: Menyisipkan Tag HTML ke Judul (innerHTML)
+// Tantangan 10.2: Menyisipkan Tag HTML ke Judul (innerHTML)
 const judulProyek = document.querySelector(`#proyek h2`);
 judulProyek.innerHTML = "Koleksi <span style='color: #e74c3c; font-weight: bold;'>Proyek</span> Saya 📁";
 
-// Tantangan 3: Memanipulasi Atribut Input
+// Tantangan 10.3: Memanipulasi Atribut Input
 // Selain mengubah teks (textContent) dan desain (style), JavaScript juga bisa mengubah atribut asli HTML seperti href, src, atau placeholder.
 const inputNama = document.querySelector(`#nama`);
 inputNama.placeholder = "Masukan nama lengkap Anda di sini..."; // Mengubah placeholder input nama
 
-// Tantangan 4: Menangkap Banyak Elemen Sekaligus (querySelectorAll + Loop)
+// Tantangan 10.4: Menangkap Banyak Elemen Sekaligus (querySelectorAll + Loop)
 const semuaTautan = document.querySelectorAll(`nav ul li a`); // Menangkap semua elemen <a> di dalam <nav>
 
 for (let i = 0; i < semuaTautan.length; i++) {
@@ -176,28 +176,111 @@ for (let i = 0; i < semuaTautan.length; i++) {
 // Langkah 1: Mencegah Perilaku Bawaan (Prevent Default)
 // Kita gunakan variabel tombolKirim yang sudah Anda buat di Tantangan sebelumnya.
 // (Pastikan tombolKirim sudah dideklarasikan sebelumnya dwngan document.querySelector).
-tombolKirim.addEventListener('click', function(event) {
+tombolKirim.addEventListener('click', function (event) {
     // 1. Mencegah halaman refresh otomatis
     event.preventDefault();
 
-    // 2. Tampilkan pesan sukses di console 
-    console.log("Tombol berhasil diklik! Pesan sedang diproses...");
+    // // 2. Tampilkan pesan sukses di console 
+    // console.log("Tombol berhasil diklik! Pesan sedang diproses...");
 
-    // 3. Ubah teks tombol sebagai umpan balik visual
-    tombolKirim.textContent = "Pesan Terkirim! ✅";
-    tombolKirim.style.backgroundColor = "#27ae68"; // Ubah jadi hijau
+    // // 3. Ubah teks tombol sebagai umpan balik visual
+    // tombolKirim.textContent = "Pesan Terkirim! ✅";
+    // tombolKirim.style.backgroundColor = "#27ae68"; // Ubah jadi hijau
 });
 
 // Langkah 2: Interaksi Mouse (Mouseover & Mouseout)
 // Kita gunakan variabel judulProfil yang sudah Anda buat di materi Hari 10.
 // Saat kursor mouse MASUK ke area teks judul
-judulProfil.addEventListener('mouseover', function() {
+judulProfil.addEventListener('mouseover', function () {
     judulProfil.style.transform = "scale(1.1)"; // Membesarkan teks 10%
     judulProfil.style.transition = "transform 0.3s ease"; // Animasi transisi halus
     judulProfil.style.cursor = "pointer"; // Ubah kursor menjadi pointer (Bentuk Tangan)
 });
 
 // Saat kursor mouse KELUAR dari area teks judul
-judulProfil.addEventListener('mouseout', function() {
+judulProfil.addEventListener('mouseout', function () {
     judulProfil.style.transform = "scale(1)"; // Kembalikan ukuran teks ke normal
+});
+
+// Tantangan 11.1: Efek Highlight pada Kolom InputInteraksi Mouse pada Tombol ( Focus & Blur )
+inputNama.addEventListener('focus', function () {
+    inputNama.style.backgroundColor = "#e8f8f5"; // Ubah warna latar belakang saat fokus
+    inputNama.style.boxShadow = "0 0 5px rgba(52, 152, 219, 0.5)"; // Tambahkan efek bayangan
+});
+
+inputNama.addEventListener('blur', function () {
+    inputNama.style.backgroundColor = "white"; // Kembalikan warna latar belakang ke default
+    inputNama.style.boxShadow = "none"; // Hapus efek bayangan
+});
+
+const inputEmail = document.querySelector(`#email`);
+inputEmail.addEventListener('focus', function () {
+    inputEmail.style.backgroundColor = "#e8f8f5"; // Ubah warna latar belakang saat fokus
+    inputEmail.style.boxShadow = "0 0 5px rgba(52, 152, 219, 0.5)"; // Tambahkan efek bayangan
+});
+
+inputEmail.addEventListener('blur', function () {
+    inputEmail.style.backgroundColor = "white"; // Kembalikan warna latar belakang ke default
+    inputEmail.style.boxShadow = "none"; // Hapus efek bayangan
+});
+
+// Tantangan 11.2: Kartu Proyek yang Merespon klik (Click Event)
+// const kartuPertama = document.querySelector('.kartu-proyek:nth-child(1)');
+// const judulKartuPertama = kartuPertama.querySelector('h3');
+
+// kartuPertama.addEventListener('click', function() {
+//     // Ubah teks judul kartu saat diklik
+//     judulKartuPertama.textContent = "Proyek 1: Portofolio (Sedang Dilihat 👀)";
+//     kartuPertama.style.borderLeftColor = "#f39c12";
+// })
+
+// const kartuKedua = document.querySelector('.kartu-proyek:nth-child(2)');
+// const judulKartuKedua = kartuKedua.querySelector('h3');
+
+// kartuKedua.addEventListener('click', function() {
+//     // Ubah teks judul kartu saat diklik
+//     judulKartuKedua.textContent = "Proyek 2: To-Do List (Sedang Dilihat 👀)";
+//     kartuKedua.style.borderLeftColor = "#f39c12";
+// });
+
+// Tantangan Expert 11.3: Dynamic Event Listeners (Menggabungkan Loop & Events) VERSI ADVANCED DARI TANTANGAN 11.2
+const semuaKartu = document.querySelectorAll('.kartu-proyek');
+
+for (let i = 0; i < semuaKartu.length; i++) {
+    const kartu = semuaKartu[i];
+    const judulKartu = kartu.querySelector('h3');
+
+    kartu.addEventListener('click', function () {
+        // Ubah teks judul kartu saat diklik
+        judulKartu.textContent = `Proyek ${i + 1}: Sedang Dilihat 👀`;
+        kartu.style.borderLeftColor = "#f39c12";
+    });
+}
+
+// Tantangan Expert 11.4: Validasi Formulir (Form Validation)
+tombolKirim.addEventListener('click', function (event) {
+    // Mencegah halaman refresh otomatis
+    event.preventDefault();
+
+    if (inputNama.value.trim() === "" || inputEmail.value.trim() === "") {
+        inputNama.style.borderColor = "red";
+        inputEmail.style.borderColor = "red";
+
+        inputNama.placeholder = "Isi Nama Dulu! ❌";
+        inputEmail.placeholder = "Isi Email Dulu! ❌";
+        
+        inputNama.style.backgroundColor = "#e74c3c";
+        inputEmail.style.backgroundColor = "#e74c3c";
+
+        tombolKirim.textContent = "Isi Formulir Dulu! ❌";
+        tombolKirim.style.backgroundColor = "#e74c3c"; // Ubah tombol menjadi merah
+
+        alert("Harap isi semua kolom sebelum mengirim pesan.");
+        return; // Hentikan eksekusi lebih lanjut jika ada kolom kosong        
+    } else {
+        console.log("Tombol berhasil diklik! Pesan sedang diproses...");
+
+        tombolKirim.textContent = "Pesan Terkirim! ✅";
+        tombolKirim.style.backgroundColor = "#27ae68"; // Ubah jadi hijau
+    }
 });
