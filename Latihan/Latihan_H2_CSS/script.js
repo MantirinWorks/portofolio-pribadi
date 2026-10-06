@@ -268,7 +268,7 @@ tombolKirim.addEventListener('click', function (event) {
 
         inputNama.placeholder = "Isi Nama Dulu! ❌";
         inputEmail.placeholder = "Isi Email Dulu! ❌";
-        
+
         inputNama.style.backgroundColor = "#e74c3c";
         inputEmail.style.backgroundColor = "#e74c3c";
 
@@ -284,3 +284,69 @@ tombolKirim.addEventListener('click', function (event) {
         tombolKirim.style.backgroundColor = "#27ae68"; // Ubah jadi hijau
     }
 });
+
+
+// --- MATERI HARI 12: CREATE ELEMENTS ---
+// 1. Tangkap elemen induk (tempat kita akan menempelkan elemen baru)
+const areaSidebar = document.querySelector('.sidebar');
+
+// 2. Buat elemen baru (Fase Create)
+const lencanaStatus = document.createElement('div');
+
+// 3. Dandani elemen tersebut (Fase Modify)
+lencanaStatus.textContent = "🚀 Sedang aktif belajar javaScript";
+
+lencanaStatus.style.backgroundColor = "#f39c12";
+lencanaStatus.style.color = "white";
+lencanaStatus.style.padding = "10px";
+lencanaStatus.style.marginTop = "15px";
+lencanaStatus.style.borderRadius = "5px";
+lencanaStatus.style.fontWeight = "bold";
+lencanaStatus.style.textAlign = "center";
+
+// 4. Tempelkan ke halaman (Fase Append)
+// appendChild akan meletakan element baru ini di posisi paling bawah dari areaSidebar
+areaSidebar.appendChild(lencanaStatus);
+
+
+// Tantangan 12.1: Menambahkan Menu Navigasi Baru
+const menuNav = document.querySelector('nav ul');
+
+const itemBaru = document.createElement('li');
+const linkBaru = document.createElement('a')
+
+linkBaru.textContent = "Blog";
+linkBaru.href = "#blog";
+
+itemBaru.appendChild(linkBaru);
+menuNav.appendChild(itemBaru);
+
+// Tantangan 12.2: Membuat Label Skill Otomatis (Menggabungkan Loop & Create)
+// 1. Buat sebuah array (daftar) berisi keahlian Anda:
+const daftarSkill = ["HTML5", "CSS3", "JavaScript", "Git"];
+
+// 2. Tangkap elemen seksi tentang menggunakan
+const seksiTentang = document.querySelector('#tentang');
+
+// 3. Buat sebuah wadah baru untuk menampung label-label ini
+const wadahSkill = document.createElement('div');
+
+wadahSkill.style.marginTop = "15px";
+
+for (let i = 0; i < daftarSkill.length; i++) {
+
+    const span = document.createElement('span');
+    
+    span.textContent = daftarSkill[i];
+
+    span.style.backgroundColor = "#2c3e50";
+    span.style.color = "white";
+    span.style.padding = "5px 10px";
+    span.style.marginRight = "10px";
+    span.style.borderRadius = "5px";
+    span.style.fontSize = "14px";
+
+    wadahSkill.appendChild(span);
+}
+
+seksiTentang.appendChild(wadahSkill);
