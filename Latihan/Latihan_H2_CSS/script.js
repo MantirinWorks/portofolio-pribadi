@@ -328,25 +328,76 @@ const daftarSkill = ["HTML5", "CSS3", "JavaScript", "Git"];
 // 2. Tangkap elemen seksi tentang menggunakan
 const seksiTentang = document.querySelector('#tentang');
 
-// 3. Buat sebuah wadah baru untuk menampung label-label ini
-const wadahSkill = document.createElement('div');
+// // 3. Buat sebuah wadah baru untuk menampung label-label ini
+// const wadahSkill = document.createElement('div');
 
+// wadahSkill.style.marginTop = "15px";
+
+// for (let i = 0; i < daftarSkill.length; i++) {
+
+//     const span = document.createElement('span');
+
+//     span.textContent = daftarSkill[i];
+
+//     span.style.backgroundColor = "#2c3e50";
+//     span.style.color = "white";
+//     span.style.padding = "5px 10px";
+//     span.style.marginRight = "10px";
+//     span.style.borderRadius = "5px";
+//     span.style.fontSize = "14px";
+
+//     wadahSkill.appendChild(span);
+// }
+
+// seksiTentang.appendChild(wadahSkill);
+
+// Tantangan 12.3: Mengganti "For Loop" dengan Modern Array Method ".forEach()"
+// Cara Modern (Lebih bersih dan tidak perlu repot dengan i++)
+// daftarSkill.forEach(function (skill) {
+
+//     const span = document.createElement('span');
+//     span.textContent = skill; // Langsung mengambil nilai itemnya
+
+//     // ... (kode style anda tetap sama) ...  
+//     span.style.backgroundColor = "#2c3e50";
+//     span.style.color = "white";
+//     span.style.padding = "5px 10px";
+//     span.style.marginRight = "10px";
+//     span.style.borderRadius = "5px";
+//     span.style.fontSize = "14px";
+
+//     wadahSkill.appendChild(span);
+// });
+
+// seksiTentang.appendChild(wadahSkill);
+
+// Tantangan 12.4: Membuat Helper Function (Pabrik Element)
+// 1. Kita buat "pabrik elemen" satu kali saja
+function ciptakanElemen(tag, teks, propertiGaya) {
+    const elemen = document.createElement(tag);
+    elemen.textContent = teks;
+
+    // Object.assign memungkinkan kita menempelkan banyak gaya CSS sekaligus
+    Object.assign(elemen.style, propertiGaya);
+
+    return elemen;
+}
+
+// Menggabungkan "foreach" dan fungsi "ciptakanElemen" untuk Tantangan 12.2
+const wadahSkill = document.createElement('div');
 wadahSkill.style.marginTop = "15px";
 
-for (let i = 0; i < daftarSkill.length; i++) {
-
-    const span = document.createElement('span');
-    
-    span.textContent = daftarSkill[i];
-
-    span.style.backgroundColor = "#2c3e50";
-    span.style.color = "white";
-    span.style.padding = "5px 10px";
-    span.style.marginRight = "10px";
-    span.style.borderRadius = "5px";
-    span.style.fontSize = "14px";
-
+daftarSkill.forEach(function (skill) {
+    // Proses pembuatan, pengisian teks, desain dilakukan dalam 1 perintah ringkas
+    const span = ciptakanElemen('span', skill, {
+        backgroundColor: "#2c3e50",
+        color: "white",
+        padding: "5px 10px",
+        marginRight: "10px",
+        borderRadius: "5px",
+        fontSize: "14px",
+    });
     wadahSkill.appendChild(span);
-}
+});
 
 seksiTentang.appendChild(wadahSkill);
