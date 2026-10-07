@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <!-- Menghubungkan CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section id="todo-app" style="margin-top: 40px; padding: 20px; border: 1px solid #ccc; border-radius: 8px;">
+        <h2>Daftar Tugas (To-Do List) 📝</h2>
+
+        <!-- Area Input -->
+        <form id="form-todo" style="display: flex; gap: 10px; margin-bottom: 20px;">
+            <input type="text" id="input-tugas" placeholder="ketik tugas baru di sini..."
+                style="flex: 1; padding: 10px;">
+            <button type="submit"
+                style="padding: 10px 20px; background-color: #3498db; color: white; border: none; cursor: pointer;">Tambah</button>
+        </form>
+
+        <!-- Area Daftar -->
+        <ul id="daftar-tugas" style="List-style-type: none; padding: 0;">
+            <!-- Item tugas akan disuntikan ke sini oleh javaScript -->
+        </ul>
+    </section>
+
+    <!-- Menghubungkan JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
