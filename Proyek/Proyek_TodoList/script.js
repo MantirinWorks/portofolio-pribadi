@@ -6,7 +6,7 @@ const inputTugas = document.querySelector('#input-tugas');
 const daftarTugas = document.querySelector('#daftar-tugas');
 
 // Langkah 2: Event Listener untuk Formulir (Creat & Read)
-formTodo.addEventListener('submit', function(event) {
+formTodo.addEventListener('submit', function (event) {
     event.preventDefault(); // Cegah halaman refresh
 
     const teksTugas = inputTugas.value.trim();
@@ -15,6 +15,16 @@ formTodo.addEventListener('submit', function(event) {
     if (teksTugas === "") {
         alert("Nama tugas tidak boleh kosong");
         return;
+    }
+
+    // Tantangan Expert 1: Mencegah Tugas Ganda (Validasi Lanjutan)
+    const semuaTugas = document.querySelectorAll('#daftar-tugas span');
+
+    for (let i = 0; i < semuaTugas.length; i++) {
+        if (semuaTugas[i].textContent.trim().toLowerCase() === teksTugas.toLowerCase()) {
+            alert("Tugas ini sudah ada di daftar!");
+            return;
+        }
     }
 
     // Panggil fungsi pembuat elemen (kita buat fungsinya di langkah 3)
@@ -41,7 +51,7 @@ function tambahkanTugasKeDOM(teks) {
     spanTeks.style.cursor = "pointer";
 
     // Fitur UPDATE: Coret teks saat diklik (Tandai Selesai)
-    spanTeks.addEventListener('click', function() {
+    spanTeks.addEventListener('click', function () {
         if (spanTeks.style.textDecoration === "line-through") {
             spanTeks.style.textDecoration = "none";
             spanTeks.style.color = "black";
@@ -63,7 +73,7 @@ function tambahkanTugasKeDOM(teks) {
     tombolHapus.style.borderRadius = "3px";
 
     // Fitur DELETE: Hapus 'li' dari DOM saat tombol hapus diklik
-    tombolHapus.addEventListener('click', function() {
+    tombolHapus.addEventListener('click', function () {
         liBaru.remove(); // .remove() adalah metode untuk menghapus elemen diri sendiri
     });
 
@@ -74,3 +84,10 @@ function tambahkanTugasKeDOM(teks) {
     // 5. Tempelkan ke wadah utama di halaman
     daftarTugas.appendChild(liBaru);
 }
+
+// Tantangan Expert 2: Fitur "Hapus Semua" (Clear All)
+const tombolHapusSemua = document.querySelector('#btn-hapus-semua');
+
+tombolHapusSemua.addEventListener('click', function () {
+    daftarTugas.innerHTML = "";
+});
