@@ -50,4 +50,27 @@ function tambahkanTugasKeDOM(teks) {
             spanTeks.style.color = "gray";
         }
     });
+
+    // 3. Buat tombol hapus
+    const tombolHapus = document.createElement('button');
+
+    tombolHapus.textContent = "Hapus 🗑";
+    tombolHapus.style.backgroundColor = "#e74c3c";
+    tombolHapus.style.color = "white";
+    tombolHapus.style.border = "none";
+    tombolHapus.style.padding = "5px 10px";
+    tombolHapus.style.cursor = "pointer";
+    tombolHapus.style.borderRadius = "3px";
+
+    // Fitur DELETE: Hapus 'li' dari DOM saat tombol hapus diklik
+    tombolHapus.addEventListener('click', function() {
+        liBaru.remove(); // .remove() adalah metode untuk menghapus elemen diri sendiri
+    });
+
+    // 4. Rakit semua elemen
+    liBaru.appendChild(spanTeks);
+    liBaru.appendChild(tombolHapus);
+
+    // 5. Tempelkan ke wadah utama di halaman
+    daftarTugas.appendChild(liBaru);
 }
