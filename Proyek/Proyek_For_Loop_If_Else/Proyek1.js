@@ -1,4 +1,6 @@
 console.log("////////////////////////////");
+console.log("       --- Proyek 1 ---     ");
+console.log("////////////////////////////");
 
 // --- Proyek 1 (Level Pemula): Penjaga Pintu Bioskop 🎬 ---
 // Konsep yang dipelajari: if, else if, else (Kondisional Dasar)

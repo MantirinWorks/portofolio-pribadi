@@ -1,4 +1,6 @@
 console.log("////////////////////////////");
+console.log("       --- Proyek 3 ---     ");
+console.log("////////////////////////////");
 
 // --- Proyek 3 (Level Mahir): Sistem Kasir Kedai Kopi ☕ ---
 // Konsep yang dipelajari: Iterasi Array dengan for...of, Kondisional Bersarang (Nested if), dan Kalkulasi Total.

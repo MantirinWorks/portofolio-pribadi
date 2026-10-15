@@ -1,4 +1,6 @@
 console.log("////////////////////////////");
+console.log("       --- Proyek 4 ---     ");
+console.log("////////////////////////////");
 
 // --- Proyek 4 (Level Mahir): Sistem Kasir Kedai Kopi Expert ☕ ---
 // 1. Kita membuat mesin nya (Mendefinisikan Fungsi)
@@ -24,7 +26,6 @@ function prosesTransaksi(namaPelanggan, keranjang) {
 
     console.log("----------------------------");
 
-
     // Cek Promo Roti
     if (totalMinuman >= 3) {
         console.log("🎁 PROMO SPESIAL: Anda mendapatkan 1 Roti Gratis");
@@ -38,7 +39,7 @@ function prosesTransaksi(namaPelanggan, keranjang) {
         console.log(`💸 Diskon 10%  : Rp ${diskon}`);
         console.log(`📜 TOTAL BAYAR : Rp ${totalAkhir}`);
     } else {
-        console.log(`📜 TOTAL Bayar : Rp ${totalHarga}`);
+        console.log(`📜 TOTAL BAYAR : Rp ${totalHarga}`);
     }
     console.log("============================\n");
 }

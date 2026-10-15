@@ -1,4 +1,6 @@
 console.log("////////////////////////////");
+console.log("       --- Proyek 2 ---     ");
+console.log("////////////////////////////");
 
 // --- Proyek 2 (Level Menengah): Robot Pengecek Ganjil/Genap 🤖 ---
 // Konsep yang dipelajari: for loop digabung dengan if/else
