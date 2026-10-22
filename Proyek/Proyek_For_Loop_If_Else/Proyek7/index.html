@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <title>Dashboard Rapor</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background-color: #f4f4f9;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        input {
+            padding: 8px;
+            margin: 5px 0;
+            width: 90%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #2980b9;
+        }
+
+        .btn-tambah {
+            background: #e67e22;
+        }
+
+        .btn-tambah:hover {
+            background: #d35400;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- BAGIAN BARU: Form Input Siswa -->
+    <div class="card">
+        <h3>➕ Tambah Siswa Baru</h3>
+        <input type="text" id="inputNama" placeholder="Nama Siswa">
+        <input type="number" id="inputNilai" placeholder="Nilai (0-100)">
+        <input type="number" id="inputHadir" placeholder="Kehadiran (0-100)">
+
+        <button id="tombolTambah" class="btn-tambah">Tambah ke Daftar</button>
+        <p id="pesanNotifikasi" style="color: green; font-size: 14px; text-align: center;"></p>
+    </div>
+
+    <!-- BAGIAN LAMA: Laporan Hasil -->
+    <div class="card">
+        <h2>🎓 Laporan Hasil Ujian</h2>
+        <p>Rata-rata Nilai Kelas : <span id="teksRataRata" class="highlight">-</span></p>
+        <p>Jumlah Siswa Lulus : <span id="teksLulus" class="highlight">-</span> orang</p>
+        <p>Siswa Terbaik : <span id="teksTerbaik" class="highlight">-</span></p>
+
+        <button id="tombolAnalisis">Mulai Analisis</button>
+    </div>
+
+    <script src="Proyek7.js"></script>
+</body>
+
+</html>
