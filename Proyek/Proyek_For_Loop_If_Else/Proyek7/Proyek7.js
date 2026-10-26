@@ -102,3 +102,26 @@ tombolTambah.addEventListener("click", function() {
     tombol.style.background = "#3498db";
     tombol.disabled = false;
 });
+
+// FITUR FINAL: Menampilkan Array ke Layar HTML
+function perbaruiLayarList() {
+    // 1. Tangkap elemen <ul> dari HTML
+    let elementList = document.getElementById("listSiswa");
+
+    // 2. Kosongkan isinya terlebih dahulu agar data tidak menumpunk ganda saat diperbarui
+    elementList.innerHTML = "";
+
+    // 3. Lakukan Looping untuk membaca setiap siswa di array dataSiswa
+    for (let siswa of dataSiswa) {
+
+        // 4. Rakit teks HTML menggunakan data siswa
+        let tekSiswa = `<li><strong>${siswa.nama}</strong> - Nilai: ${siswa.nilai}, Hadir: ${siswa.kehadiran}%</li>`;
+
+        // 5. Suntikan (tambahkan) teks HTML tersebut ke dalam <ul>
+        elementList.innerHTML += teksSiswa;
+    }
+}
+
+// Panggil fungsi ini satu kali di paling bawah agar saat halaman web pertama kali dibuka
+// 5. data awal (Andi, Budi, Citra, dst) langsung muncul di layar
+perbaruiLayarList();
