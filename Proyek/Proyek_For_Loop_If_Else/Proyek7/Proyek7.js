@@ -101,6 +101,11 @@ tombolTambah.addEventListener("click", function() {
     tombol.innerText = "Mulai Analisis";
     tombol.style.background = "#3498db";
     tombol.disabled = false;
+
+    // ... (Kode reset kotak input dan tombol analisis sebelumnya)
+
+    // 7. Perbarui tampilan daftar siswa di layar
+    perbaruiLayarList();
 });
 
 // FITUR FINAL: Menampilkan Array ke Layar HTML
@@ -115,7 +120,7 @@ function perbaruiLayarList() {
     for (let siswa of dataSiswa) {
 
         // 4. Rakit teks HTML menggunakan data siswa
-        let tekSiswa = `<li><strong>${siswa.nama}</strong> - Nilai: ${siswa.nilai}, Hadir: ${siswa.kehadiran}%</li>`;
+        let teksSiswa = `<li><strong>${siswa.nama}</strong> - Nilai: ${siswa.nilai}, Hadir: ${siswa.kehadiran}%</li>`;
 
         // 5. Suntikan (tambahkan) teks HTML tersebut ke dalam <ul>
         elementList.innerHTML += teksSiswa;
