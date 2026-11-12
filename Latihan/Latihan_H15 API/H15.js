@@ -43,10 +43,10 @@ async function tampilkanUser() {
         // --- AWAL TANTANGAN 2 (LOADING STATE) ---
         // Sebelum minta data, kita ubah isi HTML-nya jadi teks loading
         daftarUser.innerHTML = "<li style='color: orange;'>⏳ Mengambil data dari server...</li>";
-     
+
         // --- AWAL TANTANGAN 1 (MINTA DATA) ---
         // Perintahkan JS untuk mengambil data dan TUNGGU (await) sampai selesai
-        const respons = await fetch ("https://jsonplaceholder.typicode.com/users");
+        const respons = await fetch("https://jsonplaceholder.typicode.com/users");
         const dataJSON = await respons.json(); // Terjemahkan ke format yang bisa di baca JS
 
         // --- LANJUTAN TANTANGAN 2 (HAPUS LOADING)
@@ -55,7 +55,7 @@ async function tampilkanUser() {
 
         // --- LANJUTAN TANTANGAN 1 (CETAK DATA KE LAYAR)
         // Kita buka datanya satu per satu menggunakan Looping forEach
-        dataJSON.forEach(function(user) {
+        dataJSON.forEach(function (user) {
             // a. Ciptakan elemen li baru
             const liBaru = document.createElement("li");
 
@@ -70,11 +70,11 @@ async function tampilkanUser() {
             daftarUser.appendChild(liBaru);
         });
 
-        } catch (error) {
-            // --- AKHIR TANTANGAN 2 (ERROR HANDLING) ---
-            // Jika internet mati atau link API salah, baris ini yang akan dieksekusi
-            daftarUser.innerHTML = "<li style='color: red; '>❌ Gagal menghubungi server. Silahkan coba lagi nanti.</li>";
-        }
+    } catch (error) {
+        // --- AKHIR TANTANGAN 2 (ERROR HANDLING) ---
+        // Jika internet mati atau link API salah, baris ini yang akan dieksekusi
+        daftarUser.innerHTML = "<li style='color: red; '>❌ Gagal menghubungi server. Silahkan coba lagi nanti.</li>";
+    }
 }
 
 // 3. Jalankan fungsi tampilkanUser() agar data langsung muncul saat halaman dibuka
