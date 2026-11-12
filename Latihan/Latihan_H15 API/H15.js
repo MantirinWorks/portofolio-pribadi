@@ -46,11 +46,36 @@ async function tampilkanUser() {
      
         // --- AWAL TANTANGAN 1 (MINTA DATA) ---
         // Perintahkan JS untuk mengambil data dan TUNGGU (await) sampai selesai
-        const respon = await fetch ("https://jsonplaceholder.typicode.com/users");
+        const respons = await fetch ("https://jsonplaceholder.typicode.com/users");
         const dataJSON = await respons.json(); // Terjemahkan ke format yang bisa di baca JS
 
         // --- LANJUTAN TANTANGAN 2 (HAPUS LOADING)
         // Karena datanya sudah sampai, kita hapus teks loading-nya menjadi kosong
         daftarUser.innerHTML = "";
-    }
+
+        // --- LANJUTAN TANTANGAN 1 (CETAK DATA KE LAYAR)
+        // Kita buka datanya satu per satu menggunakan Looping forEach
+        dataJSON.forEach(function(user) {
+            // a. Ciptakan elemen li baru
+            const liBaru = document.createElement("li");
+
+            // b. Isi teksnya menggunakan data dari server (user.name dan user.email)
+            liBaru.textContent = `👤 ${user.name} - ⬜ ${user.email}`;
+
+            // c. Beri sedikit jarak agar rapih
+            liBaru.style.padding = "10px";
+            liBaru.style.borderBottom = "1px solid #acc";
+
+            // d. Tempelkan ke HTML (ke dalam <ul> yang sudah kita tangkap di awal)
+            daftarUser.appendChild(liBaru);
+        });
+
+        } catch (error) {
+            // --- AKHIR TANTANGAN 2 (ERROR HANDLING) ---
+            // Jika internet mati atau link API salah, baris ini yang akan dieksekusi
+            daftarUser.innerHTML = "<li style='color: red; '>❌ Gagal menghubungi server. Silahkan coba lagi nanti.</li>";
+        }
 }
+
+// 3. Jalankan fungsi tampilkanUser() agar data langsung muncul saat halaman dibuka
+tampilkanUser();
